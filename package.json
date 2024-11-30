@@ -2,6 +2,7 @@
   "name": "new-folder--2-",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://shar2710.github.io/portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -34,5 +35,10 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "vite": "^6.0.1"
-  }
+  },
+  "description": "TechStack:\r HTML\r CSS\r Javascript\r React",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
