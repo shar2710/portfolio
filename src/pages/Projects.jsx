@@ -15,7 +15,7 @@ const Projects = () => {
       </h1>
 
       <p className='text-slate-500 mt-2 leading-relaxed'>
-        Here are some of the projects based on web development that I have worked on.
+        Here are some of the projects that I have worked on.
       </p>
 
       <div className='flex flex-wrap my-20 gap-16'>

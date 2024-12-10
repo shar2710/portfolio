@@ -95,7 +95,7 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 .glassmorphism {
-  background: rgba(8, 116, 239, 0.07);
+  background: rgba(147, 33, 182, 0.07);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 10px;
@@ -104,7 +104,7 @@ body:has(.card[data-color="green"]:hover) {
 
 .logo {
   border-radius: 8.889px;
-  background: #fff;
+  background: #d13333;
   box-shadow: 0px 10px 35px -4px rgba(67, 83, 255, 0.15),
     0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
 }
@@ -182,11 +182,11 @@ body:has(.card[data-color="green"]:hover) {
 
 /* Neo Brutalism */
 .neo-brutalism-blue {
-  background: #2b77e7;
+  background: pink;
   position: relative;
   border-radius: 10px;
   border: #2b77e7;
-  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
+  box-shadow: 0.6vmin 0.6vmin #061937, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
     0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
 }
 

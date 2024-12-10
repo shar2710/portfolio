@@ -1,9 +1,9 @@
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import useAlert from "../hooks/useAlert";
-import { Alert, Loader } from "../components";
+import { Alert } from "../components";
 
 const Contact = () => {
   const formRef = useRef();
@@ -19,53 +19,29 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Sejal Sharma",
-          from_email: form.email,
-          to_email: "s.sejal2710@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          showAlert({
-            show: true,
-            text: "Thank you for your message 😃",
-            type: "success",
-          });
-
-          setTimeout(() => {
-            hideAlert(false);
-            setForm({
-              name: "",
-              email: "",
-              message: "",
-            });
-          }, [3000]);
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          showAlert({
-            show: true,
-            text: "I didn't receive your message 😢",
-            type: "danger",
-          });
-        }
-      );
+    emailjs.sendForm(
+      'service_u4emmoo', 
+      'template_59lboah', 
+      formRef.current,
+      'czWctOM2vVmnZfYre' 
+    )
+    .then((result) => {
+      console.log(result.text);
+      setLoading(false);
+      showAlert('Email sent successfully!', 'success');
+      setForm({ name: "", email: "", message: "" });
+    }, (error) => {
+      console.log(error.text);
+      setLoading(false);
+      showAlert('Failed to send email. Please try again later.', 'error');
+    });
   };
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container'>
-      {alert.show && <Alert {...alert} />}
+      {alert?.message && (
+        <Alert message={alert.message} type={alert.type} onClose={hideAlert} />
+      )}
 
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text'>Get in Touch</h1>

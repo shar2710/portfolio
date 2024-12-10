@@ -47,7 +47,7 @@ import {
         <h3 className='subhead-text'>Achievements</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          I have been a part of various hackathons and coding competitions. I have also contributed to various open-source projects.
+          I have been a part of various hackathons and coding competitions. I have also contributed to various open-source projects. From always standing 1st in school to securing good ranks in olympiads, I have done it all.
         </p>
         </div>
     
